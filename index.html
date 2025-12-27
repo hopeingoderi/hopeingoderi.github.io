@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hope in God – Neues Jahr Fest 2025/2026</title>
+  <meta name="description" content="Hope in God – Zweisprachig (Deutsch / Tigrinya). Programm, Countdown und Bibelverse." />
+  <style>
+    :root{
+      --bg1:#061a2b;
+      --bg2:#2a0f3a;
+      --card: rgba(255,255,255,.08);
+      --line: rgba(255,255,255,.18);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --gold:#ffd36b;
+      --mint:#73f7d6;
+      --accent:#9b7bff;
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+      --radius: 22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(155,123,255,.35), transparent 55%),
+        radial-gradient(900px 600px at 90% 20%, rgba(115,247,214,.22), transparent 60%),
+        radial-gradient(800px 500px at 50% 95%, rgba(255,211,107,.18), transparent 55%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 60px}
+    a{color:inherit;text-decoration:none}
+
+    .nav{
+      display:flex;align-items:center;justify-content:space-between; gap:12px;
+      padding:14px 16px;border:1px solid var(--line);
+      background: rgba(0,0,0,.18); backdrop-filter: blur(10px);
+      border-radius: 999px; position:sticky; top:14px; z-index:10;
+    }
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900}
+    .logo{
+      width:34px;height:34px;border-radius:10px;
+      background: conic-gradient(from 220deg, var(--gold), var(--accent), var(--mint), var(--gold));
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      position:relative;
+    }
+    .logo:after{
+      content:""; position:absolute; inset:8px; border-radius:8px;
+      background: rgba(0,0,0,.25);
+      border:1px solid rgba(255,255,255,.18);
+    }
+    .navlinks{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;align-items:center}
+    .chip{
+      padding:10px 12px;border:1px solid var(--line);border-radius:999px;
+      font-weight:800;font-size:14px;
+      background: rgba(255,255,255,.06);
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .chip:hover{transform: translateY(-1px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.28)}
+
+    .lang{
+      display:flex; gap:8px; align-items:center;
+      padding:6px; border:1px solid var(--line); border-radius:999px;
+      background: rgba(255,255,255,.06);
+    }
+    .lang button{
+      border:none; cursor:pointer;
+      padding:8px 10px;border-radius:999px;
+      font-weight:950; font-size:13px;
+      background: transparent; color: var(--text);
+      opacity:.78;
+    }
+    .lang button.active{
+      background: rgba(255,255,255,.12);
+      opacity:1;
+    }
+
+    .hero{
+      margin-top:22px;
+      display:grid; grid-template-columns: 1.2fr .8fr; gap:18px;
+    }
+    @media (max-width: 920px){ .hero{grid-template-columns:1fr} }
+
+    .card{
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .title{
+      font-size: clamp(34px, 4.4vw, 54px);
+      line-height:1.02;
+      margin: 10px 0 8px;
+      font-weight: 950;
+      letter-spacing: -.6px;
+    }
+    .subtitle{color:var(--muted);font-size:16px;line-height:1.6;max-width:68ch}
+
+    .pillrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .pill{
+      padding:10px 12px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.20);
+      background: rgba(0,0,0,.16);
+      font-weight:900;font-size:14px;
+      display:flex;gap:8px;align-items:center;
+    }
+    .dot{width:9px;height:9px;border-radius:50%}
+    .dot.gold{background:var(--gold)}
+    .dot.mint{background:var(--mint)}
+    .dot.purp{background:var(--accent)}
+    .small{color:var(--muted);font-size:14px;line-height:1.6}
+    .glowline{
+      height:1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.45), transparent);
+      margin: 12px 0 8px;
+    }
+
+    .timer{
+      display:grid; grid-template-columns: repeat(4, 1fr); gap:10px;
+      margin-top:10px;
+    }
+    .tbox{
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius: 18px;
+      padding: 14px 12px;
+      text-align:center;
+    }
+    .tbox .num{font-size:28px;font-weight:950}
+    .tbox .lab{font-size:12px;color:var(--muted);margin-top:2px;font-weight:900;letter-spacing:.3px}
+
+    .section{
+      margin-top:18px;
+      display:grid; grid-template-columns: 1fr 1fr; gap:18px;
+    }
+    @media (max-width: 920px){ .section{grid-template-columns:1fr} }
+
+    .h2{margin:0 0 10px;font-size:22px;letter-spacing:-.2px}
+    .timeline{display:flex; flex-direction:column; gap:10px; margin-top:10px}
+    .item{
+      display:grid; grid-template-columns: 110px 1fr;
+      gap:12px; padding: 12px; border-radius: 16px;
+      background: rgba(0,0,0,.16);
+      border:1px solid rgba(255,255,255,.14);
+    }
+    .time{font-weight:950}
+    .desc{color:var(--muted); line-height:1.55}
+    .desc strong{color:var(--text)}
+
+    .versebox{
+      padding:18px; border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.18);
+      background:
+        radial-gradient(600px 300px at 15% 10%, rgba(115,247,214,.20), transparent 60%),
+        radial-gradient(500px 240px at 90% 20%, rgba(255,211,107,.16), transparent 62%),
+        rgba(0,0,0,.18);
+      box-shadow: var(--shadow);
+    }
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.06);
+      font-size: 12px; font-weight:950;
+      letter-spacing:.35px; text-transform: uppercase;
+    }
+    blockquote{
+      margin: 10px 0 8px;
+      font-size: 20px; line-height:1.55;
+      font-weight: 850; letter-spacing: -.2px;
+    }
+    .ref{color: var(--muted);font-size: 14px;font-weight:900;display:flex;gap:8px;align-items:center}
+    .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    button.action{
+      border:none; cursor:pointer;
+      padding:12px 14px; border-radius: 14px;
+      font-weight:950; letter-spacing:.2px;
+      color: rgba(0,0,0,.88);
+      background: linear-gradient(135deg, var(--gold), #ffe7a4);
+      box-shadow: 0 12px 30px rgba(0,0,0,.22);
+    }
+    button.secondary{
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.10);
+      color: var(--text);
+      box-shadow:none;
+      padding:12px 14px; border-radius:14px; font-weight:950; cursor:pointer;
+    }
+    .footer{
+      margin-top:22px; text-align:center;
+      color: var(--muted); font-size: 13px; line-height:1.7;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div style="font-size:14px; opacity:.95; font-weight:950" data-i18n="brandTitle">Hope in God</div>
+          <div style="font-size:12px; color:var(--muted); font-weight:900" data-i18n="brandSub">
+            Neues Jahr Fest 2025/2026 • Bern
+          </div>
+        </div>
+      </div>
+
+      <div class="navlinks">
+        <div class="lang" aria-label="Sprache wählen">
+          <button id="btnDE" class="active" type="button">DE</button>
+          <button id="btnTI" type="button">ትግርኛ</button>
+        </div>
+        <a class="chip" href="#info" data-i18n="navInfo">Info</a>
+        <a class="chip" href="#programm" data-i18n="navProgram">Programm</a>
+        <a class="chip" href="#verse" data-i18n="navVerses">Bibelverse</a>
+      </div>
+    </div>
+
+    <div class="hero" id="info">
+      <div class="card">
+        <div class="badge" data-i18n="badgeTop">Gemeinschaft • Hoffnung • 2026</div>
+        <h1 class="title" data-i18n="mainTitle">Hope in God</h1>
+        <p class="subtitle" data-i18n="intro">
+          Wir feiern gemeinsam den Jahreswechsel in Bern – mit unseren Kindern, Freunden, Familien und der ganzen Gemeinde.
+          Wir singen, hören Gottes Wort und starten 2026 voller Hoffnung.
+        </p>
+
+        <div class="pillrow">
+          <div class="pill"><span class="dot gold"></span><span data-i18n="pillDate">Dienstag, 31.12.2025</span></div>
+          <div class="pill"><span class="dot mint"></span><span data-i18n="pillTime">20:00 Uhr – ca. 05:00 Uhr</span></div>
+          <div class="pill"><span class="dot purp"></span><span data-i18n="pillPlace">Bethlehem Kirche, Bern</span></div>
+        </div>
+
+        <div class="glowline"></div>
+        <p class="small" data-i18n="lead">
+          Leitgedanke: Hoffnung in Gott – für unsere Familien, unsere Jugend, unsere Ehepaare und unsere Gemeinde im Jahr 2026.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="h2" data-i18n="countTitle">Countdown bis 2026</h2>
+        <p class="small" style="margin:0" data-i18n="countSub">Wir zählen gemeinsam bis Mitternacht (Zeitzone: Schweiz / Bern).</p>
+        <div class="timer" aria-live="polite">
+          <div class="tbox"><div class="num" id="d">--</div><div class="lab" data-i18n="labDays">TAGE</div></div>
+          <div class="tbox"><div class="num" id="h">--</div><div class="lab" data-i18n="labHours">STUNDEN</div></div>
+          <div class="tbox"><div class="num" id="m">--</div><div class="lab" data-i18n="labMins">MINUTEN</div></div>
+          <div class="tbox"><div class="num" id="s">--</div><div class="lab" data-i18n="labSecs">SEKUNDEN</div></div>
+        </div>
+        <div class="glowline"></div>
+        <div class="small">
+          <span data-i18n="verseHint">„Der Gott der Hoffnung …“</span> <strong>(Römer 15:13)</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="programm">
+      <div class="card">
+        <h2 class="h2" data-i18n="programTitle">Programm</h2>
+        <div class="small" data-i18n="programSub">
+          Ort: Bethlehem Kirche, Bern • Start: 20:00 • Ende: ca. 05:00
+        </div>
+
+        <div class="timeline" id="timeline"></div>
+      </div>
+
+      <div class="versebox" id="verse">
+        <div class="badge" data-i18n="versesTitle">Bibelvers-Generator</div>
+        <blockquote id="verseText">Lade Vers…</blockquote>
+        <div class="ref"><span style="width:10px;height:10px;border-radius:50%;background:var(--mint);display:inline-block"></span><span id="verseRef">—</span></div>
+        <div class="small" id="rotateInfo" data-i18n="rotateInfo">Automatisch neuer Vers alle 3 Minuten.</div>
+
+        <div class="btnrow">
+          <button class="action" id="newVerseBtn" type="button" data-i18n="btnNewVerse">Neuen Vers anzeigen</button>
+          <button class="secondary" id="copyBtn" type="button" data-i18n="btnCopy">Vers kopieren</button>
+        </div>
+
+        <div class="glowline"></div>
+        <div class="small" data-i18n="source">Quelle: Luther 1912 (gemeinfrei).</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div style="font-weight:950; color:rgba(255,255,255,.9)" data-i18n="footerTop">Hope in God • Eritrische Pfingstgemeinde • Bern</div>
+      <div data-i18n="footerLine">Wir freuen uns auf euch – Gott segne euch im Jahr 2026.</div>
+      <div style="margin-top:8px">© 2025/2026</div>
+    </div>
+  </div>
+
+  <script>
+    // =========================
+    // i18n (Deutsch / Tigrinya)
+    // =========================
+    const i18n = {
+      de: {
+        brandTitle: "Hope in God",
+        brandSub: "Neues Jahr Fest 2025/2026 • Bern",
+        navInfo: "Info",
+        navProgram: "Programm",
+        navVerses: "Bibelverse",
+        badgeTop: "Gemeinschaft • Hoffnung • 2026",
+        mainTitle: "Hope in God",
+        intro: "Wir feiern gemeinsam den Jahreswechsel in Bern – mit unseren Kindern, Freunden, Familien und der ganzen Gemeinde. Wir singen, hören Gottes Wort und starten 2026 voller Hoffnung.",
+        pillDate: "Dienstag, 31.12.2025",
+        pillTime: "20:00 Uhr – ca. 05:00 Uhr",
+        pillPlace: "Bethlehem Kirche, Bern",
+        lead: "Leitgedanke: Hoffnung in Gott – für unsere Familien, unsere Jugend, unsere Ehepaare und unsere Gemeinde im Jahr 2026.",
+        countTitle: "Countdown bis 2026",
+        countSub: "Wir zählen gemeinsam bis Mitternacht (Zeitzone: Schweiz / Bern).",
+        labDays: "TAGE",
+        labHours: "STUNDEN",
+        labMins: "MINUTEN",
+        labSecs: "SEKUNDEN",
+        verseHint: "„Der Gott der Hoffnung …“",
+        programTitle: "Programm",
+        programSub: "Ort: Bethlehem Kirche, Bern • Start: 20:00 • Ende: ca. 05:00",
+        versesTitle: "Bibelvers-Generator",
+        rotateInfo: "Automatisch neuer Vers alle 3 Minuten.",
+        btnNewVerse: "Neuen Vers anzeigen",
+        btnCopy: "Vers kopieren",
+        source: "Quelle: Luther 1912 (gemeinfrei).",
+        footerTop: "Hope in God • Eritrische Pfingstgemeinde • Bern",
+        footerLine: "Wir freuen uns auf euch – Gott segne euch im Jahr 2026.",
+        timeline: [
+          ["20:00","Kinder singen – wir starten fröhlich."],
+          ["20:30","Abendessen – gemeinsame Stärkung & Gemeinschaft."],
+          ["21:15","Jugendliche Lieder – Lobpreis mit der Jugend."],
+          ["21:45","Erwachsene Lieder – gemeinsam anbeten."],
+          ["22:30","Wort von Pastor Teklit – Ermutigung aus Gottes Wort."],
+          ["00:00","Zusammen feiern – Frohes Neues Jahr 2026!"],
+          ["00:20","Bibel-Quiz – spielerisch lernen & lachen."],
+          ["01:00","Drama – Botschaft durch ein Bühnenstück."],
+          ["01:30","Zwei Zeugnisse – Gott hat Gutes getan."],
+          ["02:10","Lustiges, informatives Spiel – Freude & Wahrheit."],
+          ["02:40","Anfrage an Ehepaare – wertschätzend & ermutigend."],
+          ["03:10","Botschaft der Moderatoren (Michael & Milka): Beten & Kommunikation mit Gott."],
+          ["03:50","Dank an aktive Mitglieder 2025."],
+          ["04:20","Gemeinsames Gebet – Abschluss mit Segen."]
+        ]
+      },
+      ti: {
+        brandTitle: "Hope in God",
+        brandSub: "መዓልቲ ኣዲስ ዓመት 2025/2026 • በርን",
+        navInfo: "ሓበሬታ",
+        navProgram: "መደብ",
+        navVerses: "ቃል መጽሓፍ ቅዱስ",
+        badgeTop: "ማሕበር • ተስፋ • 2026",
+        mainTitle: "Hope in God",
+        intro: "ኣብ በርን ናይ ዓመት ለውጢ ብሓንሳብ ንኽንከብር ኢና—ምስ ህጻናትና፣ ኣዕሩኽና፣ ስድራቤትና እና ምስ ኩሉ ጉባኤ። ንዘመር፣ ቃል ኣምላኽ ንሰምዕ፣ 2026 ብተስፋ ንጀምር።",
+        pillDate: "ሰሉስ, 31.12.2025",
+        pillTime: "20:00 – ብግምት 05:00",
+        pillPlace: "ቤተልሔም ቤተ ክርስቲያን, በርን",
+        lead: "መሪ ሓሳብ: ተስፋ ኣብ ኣምላኽ—ለስድራቤታትና፣ ለወጣትና፣ ለተመርዓውቲ እና ለጉባኤና ኣብ 2026።",
+        countTitle: "ቊጽሪ ክሳብ 2026",
+        countSub: "ክሳብ ማዕረ ሌሊት ብሓንሳብ ንቆጽር (በርን/ስዊዘርላንድ).",
+        labDays: "መዓልታት",
+        labHours: "ሰዓታት",
+        labMins: "ደቒቓት",
+        labSecs: "ሰከንድ",
+        verseHint: "“ኣምላኽ ተስፋ …”",
+        programTitle: "መደብ",
+        programSub: "ቦታ: ቤተልሔም ቤተ ክርስቲያን • መጀመርታ: 20:00 • መወዳእታ: ብግምት 05:00",
+        versesTitle: "መፍጠሪ ቃል መጽሓፍ ቅዱስ",
+        rotateInfo: "ኣብ ነፍሲ 3 ደቒቓታት ሓድሽ ቃል ይቀይር።",
+        btnNewVerse: "ሓድሽ ቃል ኣርእይ",
+        btnCopy: "ቃል ቅዳሕ",
+        source: "ምንጪ: Luther 1912 (ሕጋዊ ነጻ).",
+        footerTop: "Hope in God • ኤርትራዊት ጴንጤኮስታል ጉባኤ • በርን",
+        footerLine: "ንኹልኹም ንርእየኩም—ኣምላኽ 2026 ይባርኽኩም።",
+        timeline: [
+          ["20:00","ህጻናት ዝምር—ብሓጎስ ንጀምር።"],
+          ["20:30","እራብ ምግቢ—ሓበሬታን ሕብረትን።"],
+          ["21:15","ናይ ወጣት መዝሙር—ምስ ወጣት ምዝማር።"],
+          ["21:45","ናይ ሽማግለ መዝሙር—ብሓንሳብ ምስጋና።"],
+          ["22:30","ቃል ካብ ፓስተር ተክሊት—ምትብባዕ ካብ ቃል ኣምላኽ።"],
+          ["00:00","ብሓንሳብ ምክብባር—እንቋዕ ናብ 2026 በጻሕና!"],
+          ["00:20","መርመራ መጽሓፍ ቅዱስ—ብጨዋታ ምምሃር።"],
+          ["01:00","ድራማ—መልእኽቲ ብትዕይንቲ።"],
+          ["01:30","ክልተ ምስክርነት—ኣምላኽ ዝገበረ ሰናይ።"],
+          ["02:10","ሓሳብ ዘለዎ ጨዋታ—ሓጎስን ትምህርትን።"],
+          ["02:40","መልእኽቲ ንተመርዓውቲ—ምትብባዕን ክብርን።"],
+          ["03:10","መልእኽቲ ካብ ማዕከላይ መሪ (Michael & Milka): ጸሎትን ምክትታል ምስ ኣምላኽን።"],
+          ["03:50","ምስጋና ንተግባራውያን ኣባላት 2025።"],
+          ["04:20","ሓባር ጸሎት—ብበረኸት መወዳእታ።"]
+        ]
+      }
+    };
+
+    let lang = "de";
+
+    function renderTimeline(){
+      const el = document.getElementById("timeline");
+      el.innerHTML = "";
+      i18n[lang].timeline.forEach(([t, d])=>{
+        const row = document.createElement("div");
+        row.className = "item";
+        row.innerHTML = `<div class="time">${t}</div><div class="desc">${d}</div>`;
+        el.appendChild(row);
+      });
+    }
+
+    function setLang(next){
+      lang = next;
+      document.getElementById("btnDE").classList.toggle("active", lang==="de");
+      document.getElementById("btnTI").classList.toggle("active", lang==="ti");
+
+      document.querySelectorAll("[data-i18n]").forEach(node=>{
+        const key = node.getAttribute("data-i18n");
+        if(i18n[lang][key]) node.textContent = i18n[lang][key];
+      });
+
+      renderTimeline();
+    }
+
+    document.getElementById("btnDE").addEventListener("click", ()=>setLang("de"));
+    document.getElementById("btnTI").addEventListener("click", ()=>setLang("ti"));
+
+    // Initial render
+    renderTimeline();
+
+    // =========================
+    // Countdown (Bern/Schweiz)
+    // =========================
+    const target = new Date("2026-01-01T00:00:00+01:00");
+    const dEl = document.getElementById("d");
+    const hEl = document.getElementById("h");
+    const mEl = document.getElementById("m");
+    const sEl = document.getElementById("s");
+    const pad2 = n => String(n).padStart(2,"0");
+
+    function tick(){
+      const now = new Date();
+      let diff = target - now;
+      if(diff < 0) diff = 0;
+
+      const sec = Math.floor(diff/1000);
+      const days = Math.floor(sec/86400);
+      const hours = Math.floor((sec%86400)/3600);
+      const mins = Math.floor((sec%3600)/60);
+      const secs = sec%60;
+
+      dEl.textContent = String(days);
+      hEl.textContent = pad2(hours);
+      mEl.textContent = pad2(mins);
+      sEl.textContent = pad2(secs);
+    }
+    tick(); setInterval(tick, 1000);
+
+    // =========================
+    // Verse (Luther 1912, gemeinfrei)
+    // =========================
+    const verses = [
+      { ref:"Jeremia 29:11", text:"Denn ich weiß wohl, was ich für Gedanken über euch habe, spricht der HERR: Gedanken des Friedens und nicht des Leides, daß ich euch gebe Zukunft und Hoffnung."},
+      { ref:"Römer 15:13", text:"Der Gott der Hoffnung aber erfülle euch mit aller Freude und Frieden im Glauben, daß ihr immer reicher werdet an Hoffnung durch die Kraft des heiligen Geistes."},
+      { ref:"Jesaja 41:10", text:"Fürchte dich nicht, denn ich bin mit dir; weiche nicht, denn ich bin dein Gott. Ich stärke dich, ich helfe dir auch, ich erhalte dich durch die rechte Hand meiner Gerechtigkeit."},
+      { ref:"Psalm 37:5", text:"Befiehl dem HERRN deine Wege und hoffe auf ihn; er wird's wohl machen."},
+      { ref:"Philipper 4:6–7", text:"Sorget nichts; sondern in allen Dingen lasset eure Bitten im Gebet und Flehen mit Danksagung vor Gott kundwerden. Und der Friede Gottes, welcher höher ist denn alle Vernunft, bewahre eure Herzen und Sinne in Christo Jesu."}
+    ];
+
+    const verseTextEl = document.getElementById("verseText");
+    const verseRefEl  = document.getElementById("verseRef");
+    const rotateInfoEl = document.getElementById("rotateInfo");
+
+    let currentIndex = -1;
+    function pick(except){
+      if(verses.length < 2) return 0;
+      let i = Math.floor(Math.random()*verses.length);
+      while(i===except) i = Math.floor(Math.random()*verses.length);
+      return i;
+    }
+    function showVerse(){
+      const i = pick(currentIndex);
+      currentIndex = i;
+      verseTextEl.textContent = verses[i].text;
+      verseRefEl.textContent  = verses[i].ref;
+
+      const now = new Date();
+      // rotateInfo bleibt zweisprachig über i18n; wir hängen nur die Uhrzeit an:
+      rotateInfoEl.textContent = `${i18n[lang].rotateInfo} (${pad2(now.getHours())}:${pad2(now.getMinutes())})`;
+    }
+    showVerse();
+    setInterval(showVerse, 180000);
+
+    document.getElementById("newVerseBtn").addEventListener("click", showVerse);
+    document.getElementById("copyBtn").addEventListener("click", async () => {
+      const txt = `${verseTextEl.textContent} — ${verseRefEl.textContent} (Luther 1912)`;
+      try{ await navigator.clipboard.writeText(txt); rotateInfoEl.textContent = "✅ Copied / ተቐዲሑ"; }
+      catch{ rotateInfoEl.textContent = "⚠️ Copy not possible / ክቕዳሕ ኣይከኣለን"; }
+      setTimeout(()=>showVerse(), 2200);
+    });
+
+    // Ensure initial language text is correct
+    setLang("de");
+  </script>
+</body>
+</html>
