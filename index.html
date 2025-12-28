@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hope in God – Neues Jahr Fest 2025/2026</title>
-  <meta name="description" content="Hope in God – Neues Jahr Fest 2025/2026. Zweisprachig (DE/ትግርኛ), Beamer-Modus, Countdown und inspirierende Bibelverse." />
+  <meta name="description" content="Hope in God – Neues Jahr Fest 2025/2026. Zweisprachig (DE/ትግርኛ), Beamer-Modus, Countdown, Programm, Dresscode, Adresse und inspirierende Bibelverse." />
 
   <style>
     :root{
-      /* ====== Farben wie erste Website ====== */
+      /* Farben wie erstes Layout */
       --bg1:#061a2b;
       --bg2:#2a0f3a;
       --card: rgba(255,255,255,.08);
@@ -38,7 +38,7 @@
       overflow-x:hidden;
     }
 
-    /* Subtiles Kreuz als Wasserzeichen (passt farblich zum ersten Layout) */
+    /* Subtiles Kreuz */
     body::after{
       content:"✝";
       position:fixed;
@@ -55,7 +55,7 @@
     a{color:inherit; text-decoration:none}
     .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 60px}
 
-    /* ===== Top Nav (wie erste Website) ===== */
+    /* Top Nav */
     .nav{
       display:flex;align-items:center;justify-content:space-between;
       gap:12px;padding:14px 16px;border:1px solid var(--line);
@@ -82,16 +82,16 @@
 
     .chip{
       padding:10px 12px;border:1px solid var(--line);border-radius:999px;
-      text-decoration:none;font-weight:800;font-size:14px;
+      font-weight:800;font-size:14px;
       background: rgba(255,255,255,.06);
-      transition: transform .15s ease, background .15s ease, border-color .15s ease, opacity .15s ease;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
       cursor:pointer;
       user-select:none;
     }
     .chip:hover{transform: translateY(-1px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.28)}
     .chip.active{background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.28)}
 
-    /* ===== Layout ===== */
+    /* Layout */
     .hero{
       margin-top:22px;
       display:grid; grid-template-columns: 1.2fr .8fr; gap:18px;
@@ -124,7 +124,7 @@
       font-weight: 950;
       letter-spacing: -.6px;
     }
-    .subtitle{color:var(--muted);font-size:16px;line-height:1.6;max-width:68ch}
+    .subtitle{color:var(--muted);font-size:16px;line-height:1.6;max-width:72ch}
 
     .pillrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
     .pill{
@@ -146,6 +146,7 @@
     .small{color:var(--muted);font-size:14px;line-height:1.6}
 
     /* Countdown */
+    .h2{margin:0 0 10px; font-size:22px; letter-spacing:-.2px}
     .timer{
       display:grid; grid-template-columns: repeat(4, 1fr); gap:10px;
       margin-top:10px;
@@ -166,17 +167,11 @@
     }
     @media (max-width: 920px){ .section{grid-template-columns: 1fr;} }
 
-    .h2{
-      margin:0 0 10px;
-      font-size:22px;
-      letter-spacing:-.2px;
-    }
-
     /* Timeline */
     .timeline{display:flex; flex-direction:column; gap:10px; margin-top:10px}
     .item{
       display:grid;
-      grid-template-columns: 110px 1fr;
+      grid-template-columns: 140px 1fr;
       gap:12px;
       padding: 12px;
       border-radius: 16px;
@@ -223,7 +218,6 @@
     }
     blockquote{
       margin: 10px 0 8px;
-      padding: 0;
       font-size: 20px;
       line-height:1.55;
       font-weight: 850;
@@ -274,20 +268,17 @@
       line-height:1.7;
     }
 
-    /* ====== Language behavior ====== */
+    /* Sprache: Verse */
     body.lang-de #verseTextTI { display:none; }
     body.lang-ti #verseTextDE { display:none; }
 
-    /* Program will be rendered from JS -> no extra CSS needed */
-
-    /* ====== Beamer mode ====== */
+    /* Beamer Mode */
     body.beamer .wrap{max-width:1500px}
     body.beamer .nav{position:static; margin-bottom:14px}
     body.beamer .hero{grid-template-columns: 1fr;}
     body.beamer .section{grid-template-columns: 1fr;}
     body.beamer #countCard{display:none;}
     body.beamer #programmCard{display:none;}
-
     body.beamer .title{font-size: clamp(54px, 6vw, 86px)}
     body.beamer .subtitle{font-size: 22px; max-width: 90ch}
     body.beamer .pill{font-size:18px; padding:12px 14px}
@@ -313,7 +304,7 @@
     }
     body.beamer .versebox{padding:26px;border-radius:28px}
 
-    /* In Beamer zeigen wir beide Sprachen gleichzeitig */
+    /* Beamer: beide Verse anzeigen */
     body.beamer #verseTextDE, body.beamer #verseTextTI { display:block; }
     body.beamer #verseTextTI { opacity:.90; margin-top:14px; }
   </style>
@@ -354,14 +345,29 @@
         <div class="pillrow" role="list">
           <div class="pill" role="listitem"><span class="dot gold"></span><span data-i18n="pillDate">Dienstag, 31.12.2025</span></div>
           <div class="pill" role="listitem"><span class="dot mint"></span><span data-i18n="pillTime">20:00 Uhr – ca. 05:00 Uhr</span></div>
-          <div class="pill" role="listitem"><span class="dot purp"></span><span data-i18n="pillPlace">Bethlehem Kirche, Bern</span></div>
+          <div class="pill" role="listitem">
+            <span class="dot purp"></span>
+            <a href="https://www.google.com/maps?q=Eymattestrasse+2b,+3027+Bern,+Switzerland" target="_blank" rel="noopener">
+              Eymattestrasse 2b, 3027 Bern, Switzerland
+            </a>
+          </div>
         </div>
 
         <div class="glowline"></div>
         <p class="small" data-i18n="lead">
           Leitgedanke: Hoffnung in Gott – für unsere Familien, unsere Jugend, unsere Ehepaare und unsere Gemeinde im Jahr 2026.
         </p>
-        <p class="small" data-i18n="beamerTip" style="margin-top:10px">
+
+        <div class="glowline"></div>
+        <p class="small" data-i18n="dresscode">
+          Dresscode: Weiblich – Eritreische traditionelle Kleidung • Männlich – Anzug mit weißem Hemd.
+        </p>
+        <p class="small" data-i18n="addressLine">
+          Adresse: Eymattestrasse 2b, 3027 Bern, Switzerland.
+        </p>
+
+        <div class="glowline"></div>
+        <p class="small" data-i18n="beamerTip">
           Tipp: Taste B = Beamer-Modus. F11 = Vollbild.
         </p>
       </div>
@@ -386,9 +392,8 @@
     <div class="section" id="programm">
       <div class="card" id="programmCard">
         <h2 class="h2" data-i18n="programTitle">Programm</h2>
-        <div class="small" data-i18n="programSub">Ort: Bethlehem Kirche, Bern • Start: 20:00 • Ende: ca. 05:00</div>
+        <div class="small" data-i18n="programSub">Ort: Eymattestrasse 2b, 3027 Bern • Start: 20:00 • Ende: ca. 05:00</div>
 
-        <!-- wird per JS gerendert -->
         <div class="timeline" id="timeline" aria-label="Programmablauf"></div>
       </div>
 
@@ -414,9 +419,7 @@
           </div>
 
           <div class="glowline"></div>
-          <div class="small" data-i18n="source">
-            Quelle: Luther 1912 (gemeinfrei).
-          </div>
+          <div class="small" data-i18n="source">Quelle: Luther 1912 (gemeinfrei).</div>
         </div>
       </div>
     </div>
@@ -430,7 +433,7 @@
 
   <script>
     // =========================
-    // i18n Texte (für UI + Programm)
+    // i18n (UI + Programm)
     // =========================
     const i18n = {
       de: {
@@ -446,8 +449,9 @@
           "Wir singen, hören Gottes Wort und starten 2026 voller Hoffnung.",
         pillDate: "Dienstag, 31.12.2025",
         pillTime: "20:00 Uhr – ca. 05:00 Uhr",
-        pillPlace: "Bethlehem Kirche, Bern",
         lead: "Leitgedanke: Hoffnung in Gott – für unsere Familien, unsere Jugend, unsere Ehepaare und unsere Gemeinde im Jahr 2026.",
+        dresscode: "Dresscode: Weiblich – Eritreische traditionelle Kleidung • Männlich – Anzug mit weißem Hemd.",
+        addressLine: "Adresse: Eymattestrasse 2b, 3027 Bern, Switzerland.",
         beamerTip: "Tipp: Taste B = Beamer-Modus. F11 = Vollbild.",
         countTitle: "Countdown bis 2026",
         countSub: "Wir zählen gemeinsam bis Mitternacht (Zeitzone: Schweiz / Bern).",
@@ -457,7 +461,7 @@
         labSecs: "SEKUNDEN",
         countVerseHint: "„Der Gott der Hoffnung …“",
         programTitle: "Programm",
-        programSub: "Ort: Bethlehem Kirche, Bern • Start: 20:00 • Ende: ca. 05:00",
+        programSub: "Ort: Eymattestrasse 2b, 3027 Bern • Start: 20:00 • Ende: ca. 05:00",
         versesTitle: "Bibelvers-Generator",
         rotateInfo: "Automatisch neuer Vers alle 3 Minuten.",
         btnNewVerse: "Neuen Vers anzeigen",
@@ -466,70 +470,71 @@
         footerTop: "Hope in God • Eritrische Pfingstgemeinde • Bern",
         footerLine: "Wir freuen uns auf euch – Gott segne euch im Jahr 2026.",
         timeline: [
-          ["20:00","Kinder singen – wir starten fröhlich."],
-          ["20:30","Abendessen – gemeinsame Stärkung & Gemeinschaft."],
-          ["21:15","Jugendliche Lieder – Lobpreis mit der Jugend."],
-          ["21:45","Erwachsene Lieder – gemeinsam anbeten."],
-          ["22:30","Wort von Pastor Teklit – Ermutigung aus Gottes Wort."],
-          ["00:00","Zusammen feiern – Frohes Neues Jahr 2026!"],
-          ["00:20","Bibel-Quiz – spielerisch lernen & lachen."],
-          ["01:00","Drama – Botschaft durch ein Bühnenstück."],
-          ["01:30","Zwei Zeugnisse – Mitglieder erzählen, was Gott Gutes getan hat."],
-          ["02:10","Lustiges, informatives Spiel – Freude & Wahrheit."],
-          ["02:40","Sehr attraktive Anfrage an Ehepaare – wertschätzend & ermutigend."],
-          ["03:10","Botschaft der Moderatoren (Michael & Milka): Beten & Kommunikation mit Gott."],
-          ["03:50","Dank an aktive Mitglieder 2025."],
-          ["04:20","Gemeinsames Gebet – Abschluss mit Freude."]
+          ["20:00–21:20","Abendessen – gemeinsame Stärkung & Gemeinschaft."],
+          ["21:30–22:00","Kinder Lieder – Lobpreis (mit der Jugend)."],
+          ["22:00–23:50","Jugendliche & Erwachsene Lieder – gemeinsam anbeten."],
+          ["23:50–00:20","Zusammen feiern – Frohes Neues Jahr 2026!"],
+          ["00:20–01:05","Ermutigung aus Gottes Wort durch den Pastor."],
+          ["01:05–01:20","Bibel-Quiz."],
+          ["01:20–01:50","Drama – Botschaft durch ein Bühnenstück."],
+          ["01:50–02:20","Zwei Zeugnisse – Mitglieder erzählen, was Gott Gutes getan hat."],
+          ["02:20–02:40","Lustiges, informatives Spiel – Freude & Wahrheit."],
+          ["02:40–03:10","Sehr attraktive Anfrage an Ehepaare – wertschätzend & ermutigend."],
+          ["03:10–03:50","Botschaft der Moderatoren (Michael & Milka): Beten & Kommunikation mit Gott."],
+          ["03:50–04:20","Dank an aktive Mitglieder 2025."],
+          ["04:20–Ende","Gemeinsames Gebet – Abschluss mit Freude."]
         ]
       },
       ti: {
         brandTitle: "Hope in God",
-        brandSub: "ብምክንያት ሓድሽ ዓመት 2025/2026 • ማሕበር ህያው ኣምላክ በርን",
+        brandSub: "መዓልቲ ኣዲስ ዓመት 2025/2026 • በርን",
         navInfo: "ሓበሬታ",
         navProgram: "መደብ",
-        navVerses: "ጥቅስታት ካብ ቃል መጽሓፍ ቅዱስ",
-        badgeTop: "ማሕበር ህያው ኣምላክ በርን• ተስፋ • 2026",
+        navVerses: "ቃል መጽሓፍ ቅዱስ",
+        badgeTop: "ማሕበር • ተስፋ • 2026",
         mainTitle: "Hope in God",
-        intro: "ኣብ ከተማ በርን ብምክንያት ሓዲሽ ዓመት ብሓንሳብ ሓቢርና ከነሕልፎ ኢና። ምስ ህጻናትናት ደቅና፣ ኣዕሩኽና፣ ስድራቤትና ኮይና ድማ ምስ ኩሉ ጉባኤ። ክንዘመር፣ ቃል ኣምላኽ ንምገብ፣ በዓብኡ ድማ ን2026 ብሓጎስን ክይና ብእምነት ብተስፋን ክንጀምራ ጥራይ ዝይኮነስ ክንሳገራ ኢና። ኣሜን።",
+        intro:
+          "ኣብ በርን ናይ ዓመት ለውጢ ብሓንሳብ ንኽንከብር ኢና—ምስ ህጻናትና፣ ኣዕሩኽና፣ ስድራቤትና እና ምስ ኩሉ ጉባኤ። " +
+          "ንዘመር፣ ቃል ኣምላኽ ንሰምዕ፣ 2026 ብተስፋ ንጀምር።",
         pillDate: "ሰሉስ, 31.12.2025",
         pillTime: "20:00 – ብግምት 05:00",
-        pillPlace: "ማሕበር ህያው ኣምላክ, በርን",
-        lead: "መበገሲ ሓሳብ: ተስፋ ኣብ ኣምላኽ ኣሎና—ንድራቤታትና፣ መንእሰያትና፣ ውሉድና በሓፈሻ ንሕብረትና ኣብ 2026 ሰናይን ጠሊ ዘለዎ ዓመት ትኹነልና፣ ኣሜን።",
+        lead: "መሪ ሓሳብ: ተስፋ ኣብ ኣምላኽ—ለስድራቤታትና፣ ለወጣትና፣ ለተመርዓውቲ እና ለጉባኤና ኣብ 2026።",
+        dresscode: "ክዳውንቲ (Dresscode): ኣንስትዮ – ባህላዊ ኤርትራዊ ክዳን • ወንዶ – ሱት (Anzug) ምስ ነጭ ሸሚዝ።",
+        addressLine: "ኣድራሻ: Eymattestrasse 2b, 3027 Bern, Switzerland.",
+        beamerTip: "ምኽሪ: B = መወርወሪ (Beamer). F11 = ሙሉእ ስክሪን.",
         countTitle: "ቊጽሪ ክሳብ 2026",
         countSub: "ክሳብ ማዕረ ሌሊት ብሓንሳብ ንቆጽር (በርን/ስዊዘርላንድ).",
         labDays: "መዓልታት",
         labHours: "ሰዓታት",
         labMins: "ደቒቓት",
         labSecs: "ሰከንድ",
-        verseHint: "“ኣምላኽ ተስፋ …”",
+        countVerseHint: "“ኣምላኽ ተስፋ …”",
         programTitle: "መደብ",
-        programSub: "ቦታ: ቤተልሔም ቤተ ክርስቲያን • መጀመርታ: 20:00 • መወዳእታ: ብግምት 05:00",
+        programSub: "ቦታ: Eymattestrasse 2b, 3027 Bern • መጀመርታ: 20:00 • መወዳእታ: ብግምት 05:00",
         versesTitle: "መፍጠሪ ቃል መጽሓፍ ቅዱስ",
         rotateInfo: "ኣብ ነፍሲ 3 ደቒቓታት ሓድሽ ቃል ይቀይር።",
         btnNewVerse: "ሓድሽ ቃል ኣርእይ",
         btnCopy: "ቃል ቅዳሕ",
-        source: "ምንጪ: Luther 1912 (ሕጋዊ ነጻ).",
-        footerTop: "Hope in God • ጉባኤ ማሕበር ህያው ኣምላክ• በርን",
-        footerLine: "ንኹልኹም ኣብዚ ብኣካል ክትሳተፉ ዝበቓዕኩም—ኣምላኽ ኣብ 2026 ኣብዚሑ ይባርኽኩም።",
+        source: "ምንጪ (DE): Luther 1912 (ሕጋዊ ነጻ).",
+        footerTop: "Hope in God • ኤርትራዊት ጴንጤኮስታል ጉባኤ • በርን",
+        footerLine: "ንኹልኹም ንርእየኩም—ኣምላኽ 2026 ይባርኽኩም።",
         timeline: [
-          ["20:00","ብህጻናት መዝሙር—ብሓጎስ ንጀምር።"],
-          ["20:30","ድራ ምግቢ—ሓበሬታን ሕብረትን።"],
-          ["21:15","ናይ መንእሰያት መዝሙር።"],
-          ["21:45","ናይ መዛምራን መዝሙር—ብሓንሳብ ምስጋና።"],
-          ["22:30","ቃል ካብ ፓስተር ተክሊት—ምትብባዕ ካብ ቃል ኣምላኽ።"],
-          ["00:00","ብሓንሳብ ምክብባር—እንቋዕ ናብ 2026 በጻሕና!"],
-          ["00:20","ሓፈሻዊ ፍልጠት ካብ መጽሓፍ ቅዱስ።"],
-          ["01:00","ድራማ—መልእኽቲ ሓዘል ብመንእሰያትና።"],
-          ["01:30","ክልተ ምስክርነት—ኣምላኽ ዝገበረ ሰናይ።"],
-          ["02:10","መልእክቲ ዘለዎ ኣዛናጋዕን መሃርን ጸወታ።"],
-          ["02:40","መልእኽቲ ንሰብሓደርን—ምትብባዕን።"],
-          ["03:10","መልእኽቲ ካብ ኣለይቲ መድረክ (Michael & Milka)"],
-          ["03:50","ምስጋና ንተግባራውያን ኣብነታውያን ኣባላት 2025።"],
-          ["04:20","ሓባር ጸሎት—ብበረኸት መወዳእታ።"]
+          ["20:00–21:20","እራብ ምግቢ—ሓበሬታን ሕብረትን ሓባር ምድላው።"],
+          ["21:30–22:00","መዝሙር ህጻናት—ምስጋና (ምስ ወጣት)."],
+          ["22:00–23:50","መዝሙር ወጣትን ዓበይትን—ብሓንሳብ ኣምላኽ ምስጋና።"],
+          ["23:50–00:20","ብሓንሳብ ምክብባር—እንቋዕ ናብ 2026 በጻሕና!"],
+          ["00:20–01:05","ምትብባዕ ካብ ቃል ኣምላኽ ብፓስተር።"],
+          ["01:05–01:20","መርመራ መጽሓፍ ቅዱስ (Bibel-Quiz)."],
+          ["01:20–01:50","ድራማ—መልእኽቲ ብትዕይንቲ።"],
+          ["01:50–02:20","ክልተ ምስክርነት—ኣባላት እቲ እግዚኣብሄር ዝገበረ ሰናይ ይነግሩ።"],
+          ["02:20–02:40","ሓሳብ ዘለዎ ጨዋታ—ሓጎስን ትምህርትን።"],
+          ["02:40–03:10","ኣዝዩ ዝማርክ መልእኽቲ ንተመርዓውቲ—ክብርን ምትብባዕን።"],
+          ["03:10–03:50","መልእኽቲ ካብ መራሕቲ (Michael & Milka): ጸሎትን ርክብ ምስ ኣምላኽን።"],
+          ["03:50–04:20","ምስጋና ንተግባራውያን ኣባላት 2025።"],
+          ["04:20–መወዳእታ","ሓባር ጸሎት—ብሓጎስ መወዳእታ።"]
         ]
       }
     };
-
 
     let lang = "de";
 
@@ -561,6 +566,9 @@
       renderTimeline();
       renderCurrentVerse();
     }
+
+    document.getElementById("langDE").addEventListener("click", ()=>setLang("de"));
+    document.getElementById("langTI").addEventListener("click", ()=>setLang("ti"));
 
     // =========================
     // Beamer Mode (Button + Taste B)
@@ -606,7 +614,7 @@
     tick(); setInterval(tick, 1000);
 
     // =========================
-    // Zweisprachige Verse (DE + TI)
+    // Verse zweisprachig (DE + TI)
     // =========================
     const verses = [
       {
@@ -640,7 +648,6 @@
     const verseTI = document.getElementById("verseTextTI");
     const verseRef = document.getElementById("verseRef");
     const rotateInfo = document.getElementById("rotateInfo");
-
     let currentIndex = -1;
 
     function pickRandomIndex(exceptIndex){
@@ -658,7 +665,6 @@
       verseRef.textContent = v.ref;
 
       const now = new Date();
-      // rotateInfo wird i18n-basiert gesetzt, wir hängen Uhrzeit an
       rotateInfo.textContent = `${i18n[lang].rotateInfo} (${pad2(now.getHours())}:${pad2(now.getMinutes())})`;
     }
 
@@ -667,7 +673,6 @@
       renderCurrentVerse();
     }
 
-    // Buttons
     document.getElementById("newVerseBtn").addEventListener("click", nextVerse);
 
     document.getElementById("copyBtn").addEventListener("click", async () => {
@@ -682,10 +687,6 @@
       setTimeout(renderCurrentVerse, 2200);
     });
 
-    // Language buttons
-    document.getElementById("langDE").addEventListener("click", ()=>setLang("de"));
-    document.getElementById("langTI").addEventListener("click", ()=>setLang("ti"));
-
     // Start
     applyI18n();
     renderTimeline();
@@ -694,4 +695,3 @@
   </script>
 </body>
 </html>
-
